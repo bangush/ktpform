@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/KtpAcsMiddleware.WinForm.Api/lib
+/KtpAcsMiddleware.WinForm.Api.Chidao/lib
+/KtpAcsMiddleware.WinForm.Api.Haiqing/lib
