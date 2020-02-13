@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC317F8D-B39F-4F84-BE71-34F567BE0CB1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>KtpAcsMiddleware.Test</RootNamespace>
+    <AssemblyName>KtpAcsMiddleware.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="KS.Resting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\KS.Resting.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.9.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KtpAcsMiddleware.AppService\KtpAcsMiddleware.AppService.csproj">
+      <Project>{c99b9e21-e887-4b55-ad69-1bd34fb06f93}</Project>
+      <Name>KtpAcsMiddleware.AppService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KtpAcsMiddleware.Domain\KtpAcsMiddleware.Domain.csproj">
+      <Project>{72729835-f8f2-452a-be42-b870978a8865}</Project>
+      <Name>KtpAcsMiddleware.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KtpAcsMiddleware.Infrastructure\KtpAcsMiddleware.Infrastructure.csproj">
+      <Project>{53a463e8-d6ff-413d-a95b-6089ef60003e}</Project>
+      <Name>KtpAcsMiddleware.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KtpAcsMiddleware.KtpApiService.Asp\KtpAcsMiddleware.KtpApiService.Asp.csproj">
+      <Project>{59db41eb-82ef-41d6-82e8-2d3392727277}</Project>
+      <Name>KtpAcsMiddleware.KtpApiService.Asp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KtpAcsMiddleware.KtpApiService\KtpAcsMiddleware.KtpApiService.csproj">
+      <Project>{f7adc634-ff2a-4b90-a07e-789afabbc56f}</Project>
+      <Name>KtpAcsMiddleware.KtpApiService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
